@@ -1,6 +1,7 @@
 .divider {
     align-self: stretch;
     border-right: 1px solid #333;
+    margin: 15px;
 }
 
 @media (max-width: 768px) {
