@@ -8,11 +8,11 @@ interface Props {
 
 function Card({ title, url }: Props): JSX.Element {
 	return (
-		<div className={styles.container}>
-			<Link href={url}>
+		<Link href={url}>
+			<div className={styles.container}>
 				<h3 className={styles.title}>{title}</h3>
-			</Link>
-		</div>
+			</div>
+		</Link>
 	)
 }
 

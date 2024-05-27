@@ -4,7 +4,7 @@ import Row from '@/components/Row/Row'
 export default function Home() {
 	return (
 		<div>
-			<h1>Hi</h1>
+			<h1>Logic Tools</h1>
 			<br />
 			<h2>Convertions</h2>
 			<Row>
