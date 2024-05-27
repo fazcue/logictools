@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items:flex-end;
+    justify-content: center;
+    font-size: 22px;
+    color: salmon;
+}
+
+.input {
+    border: 1px solid salmon;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    max-width: 60px;
+    font-size: 20;
+}
+
+.input:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center;
+    }
+}

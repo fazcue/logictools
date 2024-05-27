@@ -1,0 +1,10 @@
+.divider {
+    align-self: stretch;
+    border-bottom: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .divider {
+        border-bottom: none;
+    }
+}

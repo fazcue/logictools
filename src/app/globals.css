@@ -95,9 +95,32 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem;
+  min-height: calc(100vh - 60px);
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: salmon;
 }
 
 @media (prefers-color-scheme: dark) {
