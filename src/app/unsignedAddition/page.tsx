@@ -7,6 +7,7 @@ import Output from '@/components/Output/Output'
 import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { unsignedAdd } from '@/utils/additions'
+import Reset from '@/components/Reset/Reset'
 
 export default function UnsignedAddition() {
 	const [num1, setnum1] = useState<string>('')
@@ -46,6 +47,11 @@ export default function UnsignedAddition() {
 		}
 	}
 
+	const reset = () => {
+		setnum1('')
+		setnum2('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -63,10 +69,13 @@ export default function UnsignedAddition() {
 					onChange={onChangeTwo}
 					value={num2}
 					placeholder="binary..."
+					id="input2"
 				/>
 				<p>=</p>
 				<Output value={unsignedAdd(num1, num2)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }

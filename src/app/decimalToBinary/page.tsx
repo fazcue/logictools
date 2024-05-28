@@ -7,6 +7,7 @@ import Output from '@/components/Output/Output'
 import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { decimalToBinary } from '@/utils/convertions'
+import Reset from '@/components/Reset/Reset'
 
 export default function DecimalToBinary() {
 	const [num, setnum] = useState<string>('')
@@ -28,6 +29,10 @@ export default function DecimalToBinary() {
 		}
 	}
 
+	const reset = () => {
+		setnum('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -43,6 +48,8 @@ export default function DecimalToBinary() {
 				<p>=</p>
 				<Output value={decimalToBinary(+num)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }

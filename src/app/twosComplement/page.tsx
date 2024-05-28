@@ -7,6 +7,7 @@ import Output from '@/components/Output/Output'
 import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { twosComplement } from '@/utils/complements'
+import Reset from '@/components/Reset/Reset'
 
 export default function TwosComplement() {
 	const [num, setnum] = useState<string>('')
@@ -28,6 +29,10 @@ export default function TwosComplement() {
 		}
 	}
 
+	const reset = () => {
+		setnum('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -43,6 +48,8 @@ export default function TwosComplement() {
 				<p>=</p>
 				<Output value={twosComplement(num)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }

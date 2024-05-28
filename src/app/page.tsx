@@ -29,6 +29,10 @@ export default function Home() {
 					title="Signed Magnitude Addition"
 					url="/signedMagnitudeAddition"
 				/>
+				<Card
+					title="Signed Magnitude Subtraction"
+					url="/signedMagnitudeSubtraction"
+				/>
 			</Row>
 		</div>
 	)

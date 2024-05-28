@@ -7,6 +7,7 @@ import Output from '@/components/Output/Output'
 import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { hexaToDecimal } from '@/utils/convertions'
+import Reset from '@/components/Reset/Reset'
 
 export default function HexaToDecimal() {
 	const [num, setnum] = useState<string>('')
@@ -47,6 +48,10 @@ export default function HexaToDecimal() {
 		}
 	}
 
+	const reset = () => {
+		setnum('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -63,6 +68,8 @@ export default function HexaToDecimal() {
 				<p>=</p>
 				<Output value={hexaToDecimal(num)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }

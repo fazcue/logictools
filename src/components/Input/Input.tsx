@@ -8,6 +8,7 @@ interface Props {
 	placeholder: string
 	disabled?: boolean
 	readonly?: boolean
+	id?: string
 }
 
 function Input({
@@ -18,6 +19,7 @@ function Input({
 	placeholder,
 	disabled = false,
 	readonly = false,
+	id = 'input1',
 }: Props): JSX.Element {
 	return (
 		<input
@@ -29,6 +31,7 @@ function Input({
 			disabled={disabled}
 			readOnly={readonly}
 			inputMode={inputMode}
+			id={id}
 		/>
 	)
 }

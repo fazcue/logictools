@@ -7,7 +7,7 @@ interface Props {
 function Output({ value }: Props): JSX.Element {
 	return (
 		<div className={styles.container}>
-			<p>{value === '' ? '0' : value}</p>
+			<p id="output">{value === '' ? '0' : value}</p>
 		</div>
 	)
 }

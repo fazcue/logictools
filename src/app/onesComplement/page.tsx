@@ -7,6 +7,7 @@ import Output from '@/components/Output/Output'
 import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { onesComplement } from '@/utils/complements'
+import Reset from '@/components/Reset/Reset'
 
 export default function OnesComplement() {
 	const [num, setnum] = useState<string>('')
@@ -28,6 +29,10 @@ export default function OnesComplement() {
 		}
 	}
 
+	const reset = () => {
+		setnum('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -43,6 +48,8 @@ export default function OnesComplement() {
 				<p>=</p>
 				<Output value={onesComplement(num)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }

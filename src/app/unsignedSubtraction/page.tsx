@@ -8,6 +8,7 @@ import Column from '@/components/Column/Column'
 import Divider from '@/components/Divider/Divider'
 import { unsignedSubtract } from '@/utils/subtractions'
 import { binaryToDecimal } from '@/utils/convertions'
+import Reset from '@/components/Reset/Reset'
 
 export default function UnsignedSubtraction() {
 	const [num1, setnum1] = useState<string>('')
@@ -57,6 +58,11 @@ export default function UnsignedSubtraction() {
 		}
 	}
 
+	const reset = () => {
+		setnum1('')
+		setnum2('')
+	}
+
 	return (
 		<>
 			<Column width="200px">
@@ -74,10 +80,13 @@ export default function UnsignedSubtraction() {
 					onChange={onChangeTwo}
 					value={num2}
 					placeholder="binary..."
+					id="input2"
 				/>
 				<p>=</p>
 				<Output value={unsignedSubtract(num1, num2)} />
 			</Column>
+			<Divider />
+			<Reset onClick={reset} />
 		</>
 	)
 }
