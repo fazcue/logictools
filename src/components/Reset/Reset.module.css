@@ -8,9 +8,15 @@
     color: #222;
     scale: 0.9;
     transition: all 0.2s ease-in-out;
+    user-select: none;
 }
 
 .container:hover {
     color: #000;
     scale: 1;
+}
+
+.container:active {
+    background-color: #111;
+    color: #fff;
 }

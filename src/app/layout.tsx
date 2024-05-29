@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 import Header from '@/components/Header/Header'
 
@@ -21,6 +23,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<Header />
 				<main className="main">{children}</main>
+				<ToastContainer />
 			</body>
 		</html>
 	)
