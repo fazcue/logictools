@@ -8,9 +8,17 @@ export default function Home() {
 			<br />
 			<h2>Convertions</h2>
 			<Row>
-				<Card title="Binary to Decimal" url="/binaryToDecimal" />
+				<Card
+					title="Binary to Decimal"
+					url="/binaryToDecimal"
+					dataText="with steps!"
+				/>
 				<Card title="Decimal to Binary" url="/decimalToBinary" />
-				<Card title="Binary to Hexa" url="/binaryToHexa" />
+				<Card
+					title="Binary to Hexa"
+					url="/binaryToHexa"
+					dataText="with steps!"
+				/>
 				<Card title="Hexa to Binary" url="/hexaToBinary" />
 				<Card title="Hexa to Decimal" url="/hexaToDecimal" />
 			</Row>
