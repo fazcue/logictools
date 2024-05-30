@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+}
+
+.title {
+    font-size: 26px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #222;
+    padding: 10px;
+}
+
+.text {
+    font-size: 1rem;
+    color: sandybrown;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    margin: 10px 0;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    background-color: #222;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 26px;
+    max-width: 40px;
+}
