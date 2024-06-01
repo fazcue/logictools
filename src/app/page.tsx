@@ -1,47 +1,27 @@
-import Card from '@/components/Card/Card'
 import Row from '@/components/Row/Row'
+import List from '@/components/List/List'
+import { convertionsList, complementsList, operationsList } from '@/lib/data'
+import Column from '@/components/Column/Column'
+import Title from '@/components/Title/Title'
+import Divider from '@/components/Divider/Divider'
 
 export default function Home() {
 	return (
-		<div>
-			<h1>Logic Tools</h1>
-			<br />
-			<h2>Convertions</h2>
-			<Row>
-				<Card
-					title="Binary to Decimal"
-					url="/binaryToDecimal"
-					dataText="with steps!"
+		<>
+			<Column width="auto">
+				<Title value="Logic Tools" />
+			</Column>
+			<Divider />
+			<Column width="800px">
+				<List
+					items={[
+						...convertionsList,
+						...complementsList,
+						...operationsList,
+					]}
 				/>
-				<Card title="Decimal to Binary" url="/decimalToBinary" />
-				<Card
-					title="Binary to Hexa"
-					url="/binaryToHexa"
-					dataText="with steps!"
-				/>
-				<Card title="Hexa to Binary" url="/hexaToBinary" />
-				<Card title="Hexa to Decimal" url="/hexaToDecimal" />
-			</Row>
-			<br />
-			<h2>Complements</h2>
-			<Row>
-				<Card title="One's Complement" url="/onesComplement" />
-				<Card title="Two's Complement" url="/twosComplement" />
-			</Row>
-			<br />
-			<h2>Operations</h2>
-			<Row>
-				<Card title="Unsigned Addition" url="/unsignedAddition" />
-				<Card title="Unsigned Subtraction" url="/unsignedSubtraction" />
-				<Card
-					title="Signed Magnitude Addition"
-					url="/signedMagnitudeAddition"
-				/>
-				<Card
-					title="Signed Magnitude Subtraction"
-					url="/signedMagnitudeSubtraction"
-				/>
-			</Row>
-		</div>
+			</Column>
+			<Divider />
+		</>
 	)
 }

@@ -3,11 +3,7 @@
 }
 
 .title {
-    max-width: 250px;
     text-align: right;
-    word-spacing: 100vw;
-    margin: auto;
-    word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
