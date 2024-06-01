@@ -6,19 +6,16 @@ export default function Changelog() {
 	return (
 		<>
 			<Column width="auto">
-				<h1>Changelog</h1>
+				<h1>Last update</h1>
 				<HorizontalDivider />
-				<small>updated: 2024/05/30</small>
+				<small>updated: 2024/05/31</small>
 			</Column>
 			<Divider />
 			<Column width="auto">
-				<>
-					<h2>Add steps to</h2>
-					<ul>
-						<ol>Binary to Decimal</ol>
-						<ol>Binary to Hexa</ol>
-					</ul>
-				</>
+				<ul>
+					<ol>Two`s Complement Addition</ol>
+					<ol>Two`s Complement Subtraction</ol>
+				</ul>
 			</Column>
 		</>
 	)
