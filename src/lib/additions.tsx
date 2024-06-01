@@ -94,3 +94,21 @@ export const signedMagnitudeAdd = (
 
 	return '0'
 }
+
+export const twosComplementAdd = (
+	num1: string,
+	num2: string,
+	bits: number
+): string => {
+	let res = unsignedAdd(num1, num2)
+
+	if (res.length > num1.length) {
+		res = res.slice(1)
+	}
+
+	while (res.length < bits) {
+		res = '0' + res
+	}
+
+	return res
+}

@@ -1,5 +1,6 @@
 import { binaryToDecimal } from './convertions'
-import { signedMagnitudeAdd } from './additions'
+import { signedMagnitudeAdd, twosComplementAdd } from './additions'
+import { twosComplement } from './complements'
 
 export const unsignedSubtract = (
 	num1: string,
@@ -63,4 +64,18 @@ export const signedMagnitudeSubtract = (
 	const res = signedMagnitudeAdd(num1, num2, bits)
 
 	return res
+}
+
+export const twosComplementSubtract = (
+	num1: string,
+	num2: string,
+	bits: number
+): string => {
+	if (num1 && num2) {
+		const num2Complement = twosComplement(num2, bits)
+		let res = twosComplementAdd(num1, num2Complement, bits)
+		return res
+	}
+
+	return ''
 }
