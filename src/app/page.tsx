@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<>
 			<Column width="auto">
-				<Title value="Logic Tol" />
+				<Title value="Logic Tools" />
 			</Column>
 			<Divider />
 			<Column width="800px">
