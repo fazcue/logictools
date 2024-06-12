@@ -81,9 +81,3 @@ h2 {
   margin-bottom: 0.5rem;
   color: salmon;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
